@@ -19,9 +19,9 @@ services:
       - "kafka_data:/bitnami"
     environment:
       - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181
-      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://10.168.1.19:9092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092
       - ALLOW_PLAINTEXT_LISTENER=yes
-      - KAFKA_CFG_LISTENERS=PLAINTEXT://0.0.0.0:9092
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
     depends_on:
       - zookeeper
 
